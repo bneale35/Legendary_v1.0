@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2977F7D7-215E-4F25-9058-953310F10411}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Legendary_v1._0</RootNamespace>
+    <AssemblyName>Legendary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Card.cs" />
+    <Compile Include="DefeatableCard.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayableCard.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LegendaryLayout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BH_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BH_J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BH_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BH_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BW_CO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BW_DR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BW_MA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BW_SS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bystander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CA_AA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CA_ADUAO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CA_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CA_PT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CardBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC_OB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC_UE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC_XMU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD_DT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD_MD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD_MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD_SOTT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DD_TOL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DP_HCIGADO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DP_HHTFAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DP_OB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DP_RAOU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EF_DF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EF_MD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EF_PL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EF_ST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EOA_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EOA_E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EOA_FG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EOA_YFGK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GB_CS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GB_HC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GB_HSJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GB_STD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_EAOH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_HK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_SH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HE_CF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HE_ITS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HE_QD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HE_TP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HK_CR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HK_GA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HK_HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HK_UH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IM_AR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IM_EI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IM_QB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IM_RR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK_CR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK_MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK_MT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK_VI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LK_WAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MasterStrike.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MBR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MG_BC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MG_CS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MG_EB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MG_MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MG_XN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOE_BZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOE_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOE_U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MOE_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NF_BP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NF_HTW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NF_LC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NF_PF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NZPB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PTTDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_TL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R_Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RELWK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RG_BB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RG_CP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RG_ED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RG_SA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RS_ER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RS_HC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RS_MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RS_NG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RS_RD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_PTPS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_SQV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_SS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S_SSS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SchemeTwist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SF_DO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SF_GG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SF_TL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SF_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHCW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHIELD_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHIELD_O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHIELD_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIOTSS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SLM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SM_AS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SM_GR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SM_TASM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SM_WS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST_GS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST_LB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST_SC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ST_TW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH_CL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH_GOT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH_O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TH_SOP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TLV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UTPOTCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WV_BR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WV_FS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WV_HF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WV_KS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
